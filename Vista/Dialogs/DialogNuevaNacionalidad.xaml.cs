@@ -10,22 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Personas.Vista.UserControls.NuevaPersonaUserControl
+namespace Personas.Vista.Dialogs
 {
     /// <summary>
-    /// Lógica de interacción para NuevaPersonaUserControl.xaml
+    /// Lógica de interacción para DialogNuevaNacionalidad.xaml
     /// </summary>
-    public partial class NuevaPersonaUserControl : UserControl
+    public partial class DialogNuevaNacionalidad : Window
     {
-        NuevaPersonaUserControlVM vm;
-        public NuevaPersonaUserControl()
+        public DialogNuevaNacionalidad()
         {
             InitializeComponent();
-            vm = new NuevaPersonaUserControlVM();
-            DataContext = vm;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = true;
         }
     }
 }

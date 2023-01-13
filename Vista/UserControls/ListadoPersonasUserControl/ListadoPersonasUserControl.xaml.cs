@@ -20,9 +20,12 @@ namespace Personas.Vista.UserControls.ListadoPersonasUserControl
     /// </summary>
     public partial class ListadoPersonasUserControl : UserControl
     {
+        private ListadoPersonasUserControlVM vm;
         public ListadoPersonasUserControl()
         {
             InitializeComponent();
+            vm = new ListadoPersonasUserControlVM();
+            DataContext = vm;
         }
     }
 }

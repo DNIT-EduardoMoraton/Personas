@@ -36,6 +36,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Assets\personas.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CommunityToolkit.Mvvm, Version=8.0.0.0, Culture=neutral, PublicKeyToken=4aff67a105548ee2, processorArchitecture=MSIL">
       <HintPath>packages\CommunityToolkit.Mvvm.8.0.0\lib\netstandard2.0\CommunityToolkit.Mvvm.dll</HintPath>
@@ -83,9 +86,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Servicios\MainNavigationService.cs" />
+    <Compile Include="Servicios\PersonaServicio.cs" />
+    <Compile Include="Vista\Dialogs\DialogNuevaNacionalidad.xaml.cs">
+      <DependentUpon>DialogNuevaNacionalidad.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Vista\UserControls\ListadoPersonasUserControl\ListadoPersonasUserControl.xaml.cs">
       <DependentUpon>ListadoPersonasUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vista\UserControls\ListadoPersonasUserControl\ListadoPersonasUserControlVM.cs" />
     <Compile Include="Vista\UserControls\NuevaPersonaUserControl\NuevaPersonaUserControl.xaml.cs">
       <DependentUpon>NuevaPersonaUserControl.xaml</DependentUpon>
     </Compile>
@@ -103,6 +112,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Vista\Dialogs\DialogNuevaNacionalidad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Vista\UserControls\ListadoPersonasUserControl\ListadoPersonasUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -142,8 +155,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Servicios\" />
     <Folder Include="Vista\Windows\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\añadir.ico" />
+    <Resource Include="Assets\personas.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\CommunityToolkit.Mvvm.8.0.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets" Condition="Exists('packages\CommunityToolkit.Mvvm.8.0.0\build\netstandard2.0\CommunityToolkit.Mvvm.targets')" />

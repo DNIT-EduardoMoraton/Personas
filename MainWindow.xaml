@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Personas"
         mc:Ignorable="d"
-        Title="Personas" Height="450" Width="800">
+        Title="Personas" Height="450" Width="800" Icon="Assets/personas.ico">
     <Window.Resources>
         <Style x:Key="StandardButton" TargetType="Button">
-            <Setter Property="Width" Value="60"/>
+            <Setter Property="Width" Value="100"/>
             <Setter Property="Margin" Value="5"/>
         </Style>
             
@@ -16,8 +16,8 @@
     
     <DockPanel>
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
-            <Button Style="{StaticResource ResourceKey=StandardButton}" Command="{Binding Path=NewPersonCommand}">Nueva persona</Button>
-            <Button Style="{StaticResource ResourceKey=StandardButton}" Command="{Binding Path=PersonListCommand}">Listado personas</Button>
+            <Button Style="{StaticResource ResourceKey=StandardButton}" Command="{Binding Path=GoToNuevaPersonaCommand}">Nueva persona</Button>
+            <Button Style="{StaticResource ResourceKey=StandardButton}" Command="{Binding Path=GoToListaPersonasCommand}">Listado personas</Button>
         </StackPanel>
         <Border BorderBrush="Black" BorderThickness="2" Margin="5">
             <ContentControl Content="{Binding Path=MainContentControl}"></ContentControl>

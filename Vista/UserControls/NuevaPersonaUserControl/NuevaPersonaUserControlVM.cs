@@ -1,4 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Personas.Servicios;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -42,12 +44,37 @@ namespace Personas.Vista.UserControls.NuevaPersonaUserControl
             set { SetProperty(ref currNacionalidad, value); }
         }
 
+        // Commands
+
+        public RelayCommand NuevaNacionalidadCommand { get; }
+
+        // Servicios
+
+        MainNavigationService nv;
+
         public NuevaPersonaUserControlVM()
         {
+            nv = new MainNavigationService();
 
+
+            // Commands
+            NuevaNacionalidadCommand = new RelayCommand(NuevaNacionalidad);
+
+
+            // Hardcodeed
+
+            NacionalidadList = new ObservableCollection<string>()
+            {
+                "España", "Italia", "Francia"
+            };
         }
 
 
+        // Commands
+        private void NuevaNacionalidad()
+        {
+            nv.OpenNuevaNacionalidadDialog();
+        }
 
     }
 }

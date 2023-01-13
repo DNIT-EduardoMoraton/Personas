@@ -38,5 +38,11 @@ namespace Personas.Modelo
 
         }
 
+        public Persona(string nombre, string nacionalidad,  int edad)
+        {
+            Nombre = nombre;
+            Nacionalidad = nacionalidad;
+            Edad = edad;
+        }
     }
 }
