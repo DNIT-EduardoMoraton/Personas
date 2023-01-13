@@ -91,6 +91,7 @@
     <Compile Include="Vista\Dialogs\DialogNuevaNacionalidad.xaml.cs">
       <DependentUpon>DialogNuevaNacionalidad.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Dialogs\DialogNuevaNacionalidadVM.cs" />
     <Compile Include="Vista\UserControls\ListadoPersonasUserControl\ListadoPersonasUserControl.xaml.cs">
       <DependentUpon>ListadoPersonasUserControl.xaml</DependentUpon>
     </Compile>

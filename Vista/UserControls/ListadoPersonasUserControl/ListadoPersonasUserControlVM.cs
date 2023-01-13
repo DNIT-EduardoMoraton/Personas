@@ -11,10 +11,6 @@ using System.Threading.Tasks;
 namespace Personas.Vista.UserControls.ListadoPersonasUserControl
 {
 
-
-
-
-
     class ListadoPersonasUserControlVM : ObservableObject
     {
         private ObservableCollection<Persona> listPersonas;

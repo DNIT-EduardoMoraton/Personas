@@ -17,21 +17,21 @@
     <StackPanel>
         <StackPanel Style="{StaticResource StackPanelSeparation}">
             <TextBlock>Nombre</TextBlock>
-            <TextBox></TextBox>
+            <TextBox Text="{Binding Path=CurrPersona.Nombre}"></TextBox>
         </StackPanel>
         <StackPanel Style="{StaticResource StackPanelSeparation}">
             <TextBlock>Edad</TextBlock>
-            <TextBox></TextBox>
+            <TextBox Text="{Binding Path=CurrPersona.Edad}"></TextBox>
         </StackPanel>
         <StackPanel Style="{StaticResource StackPanelSeparation}">
             <TextBlock>Nacionalidad</TextBlock>
             <StackPanel Orientation="Horizontal">
-                <ComboBox Width="200" Margin="0,0,5,0" ItemsSource="{Binding Path=NacionalidadList}"></ComboBox>
+                <ComboBox Width="200" Margin="0,0,5,0" ItemsSource="{Binding Path=NacionalidadList}" SelectedItem="{Binding Path=CurrPersona.Nacionalidad}"></ComboBox>
                 <Button Command="{Binding Path=NuevaNacionalidadCommand}" Width="20">+</Button>
             </StackPanel>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Width="100">Aceptar</Button>
+            <Button Width="100" Command="{Binding Path=AceptarCommand}">Aceptar</Button>
         </StackPanel>
     </StackPanel>
     

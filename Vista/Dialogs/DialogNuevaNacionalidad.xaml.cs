@@ -19,14 +19,18 @@ namespace Personas.Vista.Dialogs
     /// </summary>
     public partial class DialogNuevaNacionalidad : Window
     {
+        DialogNuevaNacionalidadVM vm;
         public DialogNuevaNacionalidad()
         {
             InitializeComponent();
+            vm = new DialogNuevaNacionalidadVM();
+            DataContext = vm;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             DialogResult = true;
+            vm.AceptarButton();
         }
     }
 }

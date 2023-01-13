@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Personas.Modelo;
 using Personas.Servicios;
 using System;
 using System.Collections.Generic;
@@ -36,17 +37,19 @@ namespace Personas.Vista.UserControls.NuevaPersonaUserControl
             set { SetProperty(ref nacionalidadList, value); }
         }
 
-        private String currNacionalidad;
+        private Persona currPersona;
 
-        public String CurrNacionalidad
+        public Persona CurrPersona
         {
-            get { return currNacionalidad; }
-            set { SetProperty(ref currNacionalidad, value); }
+            get { return currPersona; }
+            set { SetProperty(ref currPersona, value); }
         }
+
 
         // Commands
 
         public RelayCommand NuevaNacionalidadCommand { get; }
+        public RelayCommand AceptarCommand { get;  }
 
         // Servicios
 
