@@ -27,7 +27,7 @@ namespace Personas.Vista.Dialogs
 
         public void AceptarButton()
         {
-
+            
         }
     }
 }

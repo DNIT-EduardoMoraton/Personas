@@ -28,6 +28,7 @@ namespace Personas
         public RelayCommand GoToListaPersonasCommand { get;  }
         public RelayCommand GoToNuevaPersonaCommand { get;  }
 
+        public RelayCommand GoToConsultaPersonasCommand { get; }
 
 
 
@@ -41,6 +42,7 @@ namespace Personas
 
             GoToListaPersonasCommand = new RelayCommand(GoToListaPersonas);
             GoToNuevaPersonaCommand = new RelayCommand(GoToNuevaPersona);
+            GoToConsultaPersonasCommand = new RelayCommand(GoToConsultaPersona);
 
         }
 
@@ -53,6 +55,11 @@ namespace Personas
         private void GoToNuevaPersona()
         {
             MainContentControl = nv.GoToNewNuevaPersona();
+        }
+
+        private void GoToConsultaPersona()
+        {
+            MainContentControl = nv.GoToConsultaPersona();
         }
 
 

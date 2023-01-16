@@ -1,4 +1,5 @@
 ﻿using Personas.Vista.Dialogs;
+using Personas.Vista.UserControls.ConsultaPersonaUserControl;
 using Personas.Vista.UserControls.ListadoPersonasUserControl;
 using Personas.Vista.UserControls.NuevaPersonaUserControl;
 using System;
@@ -30,7 +31,12 @@ namespace Personas.Servicios
         public NuevaPersonaUserControl GoToNewNuevaPersona()
         {
             return new NuevaPersonaUserControl();
-        } 
+        }
+        
+        public ConsultaPersonaUserControl GoToConsultaPersona()
+        {
+            return new ConsultaPersonaUserControl();
+        }
 
         public bool? OpenNuevaNacionalidadDialog()
         {

@@ -92,6 +92,10 @@
       <DependentUpon>DialogNuevaNacionalidad.xaml</DependentUpon>
     </Compile>
     <Compile Include="Vista\Dialogs\DialogNuevaNacionalidadVM.cs" />
+    <Compile Include="Vista\UserControls\ConsultaPersonaUserControl\ConsultaPersonaUserControl.xaml.cs">
+      <DependentUpon>ConsultaPersonaUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\UserControls\ConsultaPersonaUserControl\ConsultaPersonaUserControlVM.cs" />
     <Compile Include="Vista\UserControls\ListadoPersonasUserControl\ListadoPersonasUserControl.xaml.cs">
       <DependentUpon>ListadoPersonasUserControl.xaml</DependentUpon>
     </Compile>
@@ -108,12 +112,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="IObservableObject.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Vista\Dialogs\DialogNuevaNacionalidad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vista\UserControls\ConsultaPersonaUserControl\ConsultaPersonaUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -156,6 +163,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Mensajeria\Difusion\" />
+    <Folder Include="Mensajeria\Solicitud\" />
     <Folder Include="Vista\Windows\" />
   </ItemGroup>
   <ItemGroup>

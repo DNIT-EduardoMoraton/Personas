@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Personas.Vista.UserControls.NuevaPersonaUserControl
 {
-    class NuevaPersonaUserControlVM : ObservableObject
+    class NuevaPersonaUserControlVM : ObservableRecipient
     {
         private string nombre;
 
@@ -70,6 +70,15 @@ namespace Personas.Vista.UserControls.NuevaPersonaUserControl
             {
                 "España", "Italia", "Francia"
             };
+
+            // Messages
+
+            SetListeners();
+        }
+
+        private void SetListeners()
+        {
+            WeakReferenceMesenger
         }
 
 

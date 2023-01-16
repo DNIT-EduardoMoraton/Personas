@@ -18,7 +18,7 @@
     <Grid>
         <DockPanel>
             <StackPanel DockPanel.Dock="Bottom" HorizontalAlignment="Right" Orientation="Horizontal">
-                <Button IsDefault="True" Style="{StaticResource DownButtons}">Aceptar</Button>
+                <Button IsDefault="True" Style="{StaticResource DownButtons}" Click="Button_Click_1">Aceptar</Button>
                 <Button IsCancel="True" Style="{StaticResource DownButtons}">Cancelar</Button>
             </StackPanel>
             <StackPanel>
