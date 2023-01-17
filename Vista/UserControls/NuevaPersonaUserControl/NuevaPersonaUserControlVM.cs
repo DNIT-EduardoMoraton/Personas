@@ -1,5 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
+using Personas.Mensajeria.Difusion;
 using Personas.Modelo;
 using Personas.Servicios;
 using System;
@@ -78,7 +80,14 @@ namespace Personas.Vista.UserControls.NuevaPersonaUserControl
 
         private void SetListeners()
         {
-            WeakReferenceMesenger
+            WeakReferenceMessenger.Default.Register<NacionalidadValueChangedMessage>(this, (r, m) =>
+            {
+
+                NacionalidadList.Add(m.Value);
+                //if (NacionalidadList.All((s) => s != m.Value))
+                    
+
+            });
         }
 
 

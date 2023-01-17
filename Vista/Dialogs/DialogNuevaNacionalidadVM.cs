@@ -1,4 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Messaging;
+using Personas.Mensajeria.Difusion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +29,7 @@ namespace Personas.Vista.Dialogs
 
         public void AceptarButton()
         {
-            
+            WeakReferenceMessenger.Default.Send(new NacionalidadValueChangedMessage(Nacionalidad));
         }
     }
 }
