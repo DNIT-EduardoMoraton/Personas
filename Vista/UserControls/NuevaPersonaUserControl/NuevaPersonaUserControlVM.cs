@@ -60,10 +60,11 @@ namespace Personas.Vista.UserControls.NuevaPersonaUserControl
         public NuevaPersonaUserControlVM()
         {
             nv = new MainNavigationService();
-
+            CurrPersona = new Persona();
 
             // Commands
             NuevaNacionalidadCommand = new RelayCommand(NuevaNacionalidad);
+            AceptarCommand = new RelayCommand(Aceptar);
 
 
             // Hardcodeed
@@ -78,14 +79,13 @@ namespace Personas.Vista.UserControls.NuevaPersonaUserControl
             SetListeners();
         }
 
+
         private void SetListeners()
         {
             WeakReferenceMessenger.Default.Register<NacionalidadValueChangedMessage>(this, (r, m) =>
             {
 
                 NacionalidadList.Add(m.Value);
-                //if (NacionalidadList.All((s) => s != m.Value))
-                    
 
             });
         }
@@ -95,6 +95,11 @@ namespace Personas.Vista.UserControls.NuevaPersonaUserControl
         private void NuevaNacionalidad()
         {
             nv.OpenNuevaNacionalidadDialog();
+        }
+
+        private void Aceptar()
+        {
+            WeakReferenceMessenger.Default.Send(new NuevaPersonaValueChangedMessage(CurrPersona));
         }
 
     }

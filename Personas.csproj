@@ -88,6 +88,7 @@
     </ApplicationDefinition>
     <Compile Include="Mensajeria\Difusion\NacionalidadValueChangedMessage.cs" />
     <Compile Include="Mensajeria\Difusion\NuevaPersonaValueChangedMessage.cs" />
+    <Compile Include="Mensajeria\Solicitud\CurrPersonaRequestMessage.cs" />
     <Compile Include="Servicios\MainNavigationService.cs" />
     <Compile Include="Servicios\PersonaServicio.cs" />
     <Compile Include="Vista\Dialogs\DialogNuevaNacionalidad.xaml.cs">
@@ -165,7 +166,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Mensajeria\Solicitud\" />
     <Folder Include="Vista\Windows\" />
   </ItemGroup>
   <ItemGroup>

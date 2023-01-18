@@ -21,6 +21,6 @@
         
     </UserControl.Resources>
     <Grid>
-        <ListBox ItemsSource="{Binding Path=ListPersonas}" Margin="30" ItemTemplate="{StaticResource PersonaTexto}"></ListBox>
+        <ListBox ItemsSource="{Binding Path=ListPersonas}" Margin="30" ItemTemplate="{StaticResource PersonaTexto}" SelectedItem="{Binding Path=CurrPersona}"></ListBox>
     </Grid>
 </UserControl>

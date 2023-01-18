@@ -14,15 +14,15 @@
     <StackPanel Orientation="Vertical">
         <StackPanel>
             <TextBlock>Nombre</TextBlock>
-            <TextBox IsReadOnly="True"></TextBox>
+            <TextBox IsReadOnly="True" Text="{ Binding Path=Persona.Nombre}"></TextBox>
         </StackPanel>
         <StackPanel>
-            <TextBlock>Nombre</TextBlock>
-            <TextBox IsReadOnly="True"></TextBox>
+            <TextBlock>Nacionalidad</TextBlock>
+            <TextBox IsReadOnly="True" Text="{ Binding Path=Persona.Nacionalidad}"></TextBox>
         </StackPanel>
         <StackPanel>
-            <TextBlock>Nombre</TextBlock>
-            <TextBox IsReadOnly="True"></TextBox>
+            <TextBlock>Edad</TextBlock>
+            <TextBox IsReadOnly="True" Text="{ Binding Path=Persona.Edad}"></TextBox>
         </StackPanel>
     </StackPanel>
 </UserControl>

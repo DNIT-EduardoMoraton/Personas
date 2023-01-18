@@ -1,4 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Messaging;
+using Personas.Mensajeria.Difusion;
+using Personas.Mensajeria.Solicitud;
 using Personas.Modelo;
 using Personas.Servicios;
 using System;
@@ -21,6 +24,15 @@ namespace Personas.Vista.UserControls.ListadoPersonasUserControl
             set { SetProperty(ref listPersonas, value); }
         }
 
+        private Persona currPersona;
+
+        public Persona CurrPersona
+        {
+            get { return currPersona; }
+            set { SetProperty(ref currPersona, value);  }
+        }
+
+
         // Services
 
         PersonaServicio personaServicio;
@@ -30,6 +42,22 @@ namespace Personas.Vista.UserControls.ListadoPersonasUserControl
             personaServicio = new PersonaServicio();
 
             ListPersonas = personaServicio.getList();
+            manageMessages();
+        }
+
+        // Messaging
+        private void manageMessages()
+        {
+            WeakReferenceMessenger.Default.Register<NuevaPersonaValueChangedMessage>(this, (r, m) =>
+            {
+                ListPersonas.Add(m.Value);
+            });
+
+            WeakReferenceMessenger.Default.Register<ListadoPersonasUserControlVM, CurrPersonaRequestMessage>(this, (r, m) =>
+            {
+                m.Reply(CurrPersona);
+            });
+            
         }
 
     }

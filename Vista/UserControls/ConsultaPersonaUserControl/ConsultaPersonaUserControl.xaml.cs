@@ -20,9 +20,12 @@ namespace Personas.Vista.UserControls.ConsultaPersonaUserControl
     /// </summary>
     public partial class ConsultaPersonaUserControl : UserControl
     {
+        private ConsultaPersonaUserControlVM vm;
         public ConsultaPersonaUserControl()
         {
             InitializeComponent();
+            vm = new ConsultaPersonaUserControlVM();
+            DataContext = vm;
         }
     }
 }
